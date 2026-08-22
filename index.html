@@ -1,0 +1,887 @@
+<!--
+========================================================================
+  ANF LEATHER COMPANY — Single-Page Luxury Website
+  Edit these placeholders before going live:
+  -----------------------------------------------
+  BRAND NAME ....... "ANF Leather Company" (appears in <title>, <h1>, footer, etc.)
+  PHONE NUMBER ..... "+1 (555) 123-4567"   → search and replace "tel:+15551234567"
+  WHATSAPP NUMBER .. "15551234567"         → search and replace "wa.me/15551234567"
+                       (international format, no + or spaces)
+  WHATSAPP MSG ..... "Hi ANF! I'd love to learn more about your products."
+                       → URL-encoded string in wa.me link below
+  SOCIAL LINKS ..... Replace placeholder URLs in #contact-social & footer
+                       Instagram: https://instagram.com/yourhandle
+                       Facebook:  https://facebook.com/yourhandle
+                       TikTok:    https://tiktok.com/@yourhandle
+                       YouTube:   https://youtube.com/@yourhandle
+                       Pinterest: https://pinterest.com/yourhandle
+  GOOGLE MAPS ...... Replace iframe src="…" in #map section with your own
+                       Maps > Share > Embed > copy <iframe>
+  EMAIL (CONTACT) .. "hello@anfleather.com" → search/replace
+  ADDRESS .......... "123 Luxury Avenue, Beverly Hills, CA 90210"
+  HOURS ............ "Mon–Sat 10am – 7pm / Sun 11am – 5pm"
+  FORM ENDPOINT .... Open assets/js/form.js and set FORM_ENDPOINT (Formspree/EmailJS)
+========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ANF Leather Company — artisanal leather goods made from premium hides, handcrafted for modern living and enduring style." />
+  <meta name="theme-color" content="#2f6a43" />
+  <title>AnF Leather Company — Luxury Leather Goods</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6a43'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Georgia, serif' font-size='24' fill='%23cfeac5'%3EANF%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts CDN — Playfair Display (headings) + Poppins (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,700&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons are rendered locally via CSS masks to avoid third-party CDN warnings -->
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- 1. HEADER / NAVBAR                                            -->
+<!-- ============================================================ -->
+<header id="site-header" class="site-header">
+  <div class="container nav-container">
+    <a href="#home" class="logo" aria-label="ANF Leather Company — Home">
+      <img src="assets/images/gallery/WhatsApp Image 2026-07-28 at 12.15.50 PM.jpeg" alt="ANF Leather Company logo" class="logo-img" loading="lazy" decoding="async" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#founder" class="nav-link">Founder</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Slide-In Menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#founder" class="mobile-nav-link">Founder</a></li>
+      <li><a href="#products" class="mobile-nav-link">Products</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="#process" class="mobile-nav-link">Process</a></li>
+      <li><a href="#contact" class="mobile-nav-link mobile-nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================ -->
+<!-- 2. HERO SECTION                                               -->
+<!-- ============================================================ -->
+<section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Luxury Leather · Timeless Craft</p>
+        <h6 class="hero-title"><span class="brand-name">AnF tanning Company</span><br /><em>think for quality leathers</em></h6>
+        <p class="hero-subtitle">
+          From carefully selected hides to expert finishing, we create premium leather goods with refined texture, lasting strength, and modern character.
+        </p>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-ctas">
+          <a href="#products" class="btn btn-primary">
+            <span>Explore Collection</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Book a Consultation</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="about-slider hero-slider" aria-label="Homepage image slider">
+          <div class="about-slide active">
+            <img
+              src="assets/images/gallery/WhatsApp Image 2026-08-10 at 10.23.52 PM (1).jpeg"
+              alt="Artisan workshop interior at ANF Leather Company"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="about-slide">
+            <img
+              src="assets/images/gallery/WhatsApp Image 2026-08-10 at 10.24.42 PM.jpeg"
+              alt="Premium leather sample with refined texture"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="about-slide">
+            <img
+              src="assets/images/gallery/WhatsApp Image 2026-08-10 at 10.23.52 PM.jpeg"
+              alt="Finished ANF leather product displayed in studio"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="about-slider-controls">
+            <button class="about-slider-btn prev" type="button" aria-label="Previous image">&#10094;</button>
+            <div class="about-slider-dots" aria-label="Homepage slide navigation">
+              <button class="about-slider-dot active" type="button" aria-label="Show image 1"></button>
+              <button class="about-slider-dot" type="button" aria-label="Show image 2"></button>
+              <button class="about-slider-dot" type="button" aria-label="Show image 3"></button>
+            </div>
+            <button class="about-slider-btn next" type="button" aria-label="Next image">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll" aria-label="Scroll to About">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-text">Discover</span>
+  </a>
+</section>
+
+<!-- ============================================================ -->
+<!-- 3. ABOUT THE COMPANY                                          -->
+<!-- ============================================================ -->
+<section id="about" class="section section-about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <div class="about-slider" aria-label="About company image slider">
+        <div class="about-slide active">
+          <img
+            src="assets/images/gallery/studio.jpeg"
+            alt="ANF leather atelier — our studio where premium hides are transformed"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about-slide">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-01 at 11.01.39 AM.jpeg"
+            alt="Founder Nouman with the ANF leather brand"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about-slide">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-01 at 11.01.39 AM (1).jpeg"
+            alt="Premium leather finish and texture sample"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="about-slider-controls">
+          <button class="about-slider-btn prev" type="button" aria-label="Previous image">&#10094;</button>
+          <div class="about-slider-dots" aria-label="Slide navigation">
+            <button class="about-slider-dot active" type="button" aria-label="Show image 1"></button>
+            <button class="about-slider-dot" type="button" aria-label="Show image 2"></button>
+            <button class="about-slider-dot" type="button" aria-label="Show image 3"></button>
+          </div>
+          <button class="about-slider-btn next" type="button" aria-label="Next image">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal">
+      <p class="eyebrow">About AnF</p>
+      <h2 class="section-title">The heart of AnF Leather</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <p class="section-lede">
+        Our office is the centre of AnF Leather Company's operations, where ideas, planning, and customer relationships come together. It reflects our commitment to professionalism, integrity, and excellence in every aspect of our business.
+      </p>
+      <p>
+        From managing client enquiries and coordinating production to maintaining quality standards and ensuring timely deliveries, our dedicated team works with precision and efficiency. Every department collaborates to provide a seamless experience for our customers and business partners.
+      </p>
+      <p>
+        Our Innovation Centre is where creativity meets craftsmanship. We continuously explore new leather finishes, colors, textures, and sustainable manufacturing techniques to meet evolving market demands. By combining advanced technology with skilled expertise, we develop innovative leather solutions that deliver exceptional quality, durability, and modern design.
+      </p>
+      <p>
+       Our modern warehouse is designed to ensure the safe storage and efficient handling of premium leather. Every material is carefully organized, inspected, and managed to maintain its quality before production and delivery. With a streamlined inventory system and dedicated logistics team, we ensure timely dispatch and reliable service to our customers worldwide.
+      </p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <i class="fa-solid fa-leaf pillar-icon"></i>
+          <h4>Professional team</h4>
+          <p>Our experienced professionals work together with dedication, expertise, and integrity to deliver outstanding service and support to every client.</p>
+        </div>
+        <div class="pillar">
+          <i class="fa-solid fa-flask pillar-icon"></i>
+          <h4>Efficient operations</h4>
+          <p>From client communication to production coordination and quality management, our office ensures every process runs smoothly and efficiently.</p>
+        </div>
+        <div class="pillar">
+          <i class="fa-solid fa-award pillar-icon"></i>
+          <h4>Customer commitment</h4>
+          <p>We are committed to building lasting relationships through transparent communication, reliable service, and complete customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 4. ABOUT THE FOUNDER                                          -->
+<!-- ============================================================ -->
+<section id="founder" class="section section-founder">
+  <div class="container founder-grid">
+    <div class="founder-media reveal">
+      <div class="founder-gallery">
+        <div class="founder-parent-card">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-16 at 2.48.25 PM.jpeg"
+            alt="Nouman, Founder of ANF Leather Company"
+            loading="lazy"
+            decoding="async"
+            class="founder-parent-image"
+          />
+        </div>
+
+        <!-- child images moved below the founder information -->
+      </div>
+    </div>
+
+    <div class="founder-copy reveal">
+      <p class="eyebrow">Meet the Founder</p>
+      <h2 class="section-title">Mr. Abdullah Basha </h2>
+      <p class="founder-title">The founder</p>
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <blockquote class="founder-quote">
+        &ldquo;Kahaf Tanning Company was founded in the 1950s by our visionary founder, Mr. Abdullah Basha, with a strong commitment to quality, craftsmanship
+      </blockquote>
+
+      <p>
+       After decades of successful management, Mr. Abdullah Basha retired in 2015, passing the legacy and responsibility of the company to his three sons.
+      </p>
+      <p>
+        The three sons expanded the business by establishing two dedicated divisions: AnF Tanning Company and PLE. Mr. Nouman manages AnF Tanning Company, while Mr. Imran and Mr. Usman jointly manage PLE, continuing the tradition of innovation, quality, and customer commitment that has been the foundation of Kahaf Tanning Company for generations
+      </p>
+
+      <p class="founder-signature">— Nouman</p>
+      <div class="founder-child-grid">
+        <div class="founder-child-card">
+          <img
+            src="assets/images/gallery/studio.jpeg"
+            alt="ANF leather studio and craftsmanship"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="founder-child-card">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-01 at 11.01.39 AM.jpeg"
+            alt="Founder with premium leather products"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="founder-child-card">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-01 at 11.01.39 AM (1).jpeg"
+            alt="Premium leather finish and texture"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 5. OUR PRODUCTS                                               -->
+<!-- ============================================================ -->
+<section id="products" class="section section-products">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">Our products</p>
+      <h2 class="section-title">Signature Leather Goods</h2>
+      <div class="section-divider center" aria-hidden="true"></div>
+      <p class="section-lede center">
+Discover our premium leather collection, crafted with precision and designed to meet the highest standards of quality, durability, and performance for a wide range of applications.
+      </p>
+    </header>
+
+    <div class="products-grid">
+      <!-- Product 01 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">  
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 10.58.51 PM.jpeg"
+            alt="ANF foil leather — premium leather tote bag"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+          <span class="product-badge">Best Seller</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">FOIL LEATHER </h3>
+          <p class="product-desc">
+            Premium foil leather with a luxurious metallic finish, offering exceptional durability, elegance
+          </p>
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 02 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 11.16.10 PM.jpeg"
+            alt="ANF Saddle Card Case — slim leather card wallet"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Suede leather</h3>
+          <p class="product-desc">
+           Luxuriously soft suede leather with a premium finish, designed for comfort, elegance, and long-lasting performance
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 03 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 11.19.15 PM.jpeg"
+            alt="ANF Cognac Weekender — full-grain leather travel bag"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+          <span class="product-badge gold">New</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Sheep finished leather</h3>
+          <p class="product-desc">
+            Our finished leather is carefully processed using advanced tanning and finishing techniques to deliver exceptional durability, a smooth texture, and a refined appearance.
+          </p>
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 04 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 11.29.42 PM.jpeg"
+            alt="ANF Atelier Leather Belt — vegetable-tanned belt"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">EI leather</h3>
+          <p class="product-desc">
+           EI Leather is supplied in its initial processing stage, offering a high-quality base material ready for further tanning, finishing, or custom manufacturing
+          </p>
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 05 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 11.25.42 PM.jpeg"
+            alt="ANF Signature Wallet — compact leather bifold"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Crust leather</h3>
+          <p class="product-desc">
+            Naturally processed Crust Leather, perfect for customised designs and finishes
+          </p>
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 06 -->
+      <article class="product-card reveal">
+        <div class="product-img-wrap">
+          <img
+            src="assets/images/gallery/WhatsApp Image 2026-08-02 at 11.22.47 PM.jpeg"
+            alt="ANF Leather Care Set — premium conditioning kit"
+            loading="lazy"
+            decoding="async"
+            class="product-img"
+          />
+          <span class="product-badge">Set</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Goat finished leather</h3>
+          <p class="product-desc">
+            Our Goat Leather delivers a smooth finish with excellent durability for premium products
+          </p>
+          <a href="#contact" class="product-link">
+            <span>View Details</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 6. GALLERY                                                    -->
+<!-- ============================================================ -->
+<section id="gallery" class="section section-gallery">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow"> Our gallery </p>
+      <h2 class="section-title">our leather catalogue</h2>
+      <div class="section-divider center" aria-hidden="true"></div>
+      <p class="section-lede center">
+Explore our gallery showcasing premium leather products, advanced manufacturing processes .We manufacture the leather for the garments,leather bags,slippers, shoes etc,.     </p>
+    </header>
+
+    <div class="gallery-grid">
+      <article class="gallery-item reveal" data-full="assets/images/gallery/WhatsApp Image 2026-07-30 at 7.21.41 PM.jpeg">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 2.23.59 PM.jpeg" alt="Premium foil leather with metallic finish" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Foil Leather</h3>
+          <p>Premium metallic-finish leather ideal for fashion garments, luxury bags, and statement accessories. Provides a modern sheen with lasting durability.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="assets/images/gallery/shiny-bronze-textured-paper-background.jpg">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 2.47.50 PM.jpeg" alt="Suede leather with soft brushed texture" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Gold foil leather</h3>
+          <pbrushed lprized forcomfort, elegance, and a refined handcrafted finish>Gold foil leather featured with a metalic finish that</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="assets/images/gallery/brown-fine-leather-textured-background.jpg">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 2.53.33 PM.jpeg" alt="Finished leather with smooth polished surface" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Brown suede leather</h3>
+          <p>Brown suede leather offers a soft, velvety texture with a rich, natural brown tone.It is used to make the quality loafers </p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="assets/images/gallery/llt.jpg">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 3.03.39 PM.jpeg" alt="Full-grain leather with natural character" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Red suede leather</h3>
+          <p>Red suede leather combines a luxurious velvety texture with a rich, vibrant red tone.It is used to prepare garments and suede handbags</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="https://placehold.co/1200x900/4A2C1A/C9A24B?text=Crust+Leather">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 3.30.28 PM.jpeg" alt="Raw crust leather ready for finishing" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>sheep brown garments </h3>
+          <p>Raw, untreated leather base perfect for custom finishing and bespoke projects. Used for creating personalized bags, shoes, and garments.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="https://placehold.co/1200x900/6F4E37/FFFFFF?text=Goat+Leather">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 3.28.17 PM.jpeg" alt="Goat leather with sleek durable finish" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Goat Leather</h3>
+          <p>Lightweight yet extremely durable leather ideal for premium wallets, bags, slippers, and fine accessories. Combines strength with exceptional suppleness.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="https://placehold.co/1200x900/FAF8F5/6F4E37?text=Vegetable+Tanned+Leather">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-08-03 at 7.00.32 PM.jpeg" alt="Vegetable-tanned leather with warm earthy tones" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Vegetable-Tanned Leather</h3>
+          <p>Eco-friendly leather tanned using natural plant extracts. Features rich natural color development and is perfect for sustainable fashion, bags, and artisanal garments.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal" data-full="assets/images/gallery/studio.jpeg">
+        <div class="gallery-media">
+          <img src="assets/images/gallery/WhatsApp Image 2026-07-31 at 12.13.37 PM.jpeg" alt="ANF leather workshop showcasing expert craftsmanship" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery-info">
+          <h3>Our Workshop</h3>
+          <p>Where expertise meets tradition. Our artisan team carefully selects, tans, and finishes every hide to ensure premium quality in every ANF leather product.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Lightbox (injected by gallery.js — but HTML shell here for graceful markup) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="" alt="" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. MANUFACTURING PROCESS                                      -->
+<!-- ============================================================ -->
+<section id="process" class="section section-process">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">How we craft leather</p>
+      <h2 class="section-title">Our Manufacturing Process</h2>
+      <div class="section-divider center" aria-hidden="true"></div>
+      <p class="section-lede center">
+        Every hide undergoes a carefully controlled tanning and finishing process to ensure exceptional quality, durability, and consistency at every stage.
+      </p>
+    </header>
+
+    <ol class="process-timeline">
+      <li class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <span class="step-icon"><i class="fa-solid fa-droplet"></i></span>
+          <h3>Dyeing and colouring</h3>
+          <p>
+            Premium dyes are carefully applied to the leather to achieve rich, uniform colours. This process enhances the leather's appearance 
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <span class="step-icon"><i class="fa-solid fa-droplet"></i></span>
+          <h3>Drying and conditioning</h3>
+          <p>
+            The dyed leather is dried to restore its natural softness, flexibility, and strength while preparing it for the next stage of production.
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <span class="step-icon"><i class="fa-solid fa-droplet"></i></span>
+          <h3>Staking and tanning process</h3>
+          <p>
+           The leathers are staked using specialised staking machines to soften the fibres, enhance flexibility, and create a smooth, premium feel.
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <span class="step-icon"><i class="fa-solid fa-droplet"></i></span>
+          <h3>Plating and measuring</h3>
+          <p>
+            The leather is plated to achieve a smooth, refined surface and consistent finish. Each piece is then carefully measured for thickness, area in DCM
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step reveal">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <span class="step-icon"><i class="fa-solid fa-droplet"></i></span>
+          <h3>Finishing & Packaging</h3>
+          <p>
+            After final quality inspection, the leather is securely packed using protective materials to maintain its quality during storage and transportation, ensuring it reaches customers in perfect condition.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 8. CONTACT + MAP                                              -->
+<!-- ============================================================ -->
+<section id="contact" class="section section-contact">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="section-divider center" aria-hidden="true"></div>
+      <p class="section-lede center">
+        Have questions about our leather products or services? Our team is here to assist you with product enquiries, bulk orders, export information . We aim to respond to all enquiries within one business day
+      </p>
+    </header>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form reveal" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required minlength="2" autocomplete="name" />
+            <small class="form-error" data-for="name"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <small class="form-error" data-for="email"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            <small class="form-error" data-for="phone"></small>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General Inquiry</option>
+              <option value="wholesale">Wholesale / Stockist</option>
+              <option value="booking">Book Appointment</option>
+              <option value="press">Press Request</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+          <small class="form-error" data-for="message"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Thank you! Your message has been received. We'll be in touch shortly.</span>
+        </div>
+      </form>
+
+      <!-- Contact Info -->
+      <aside class="contact-info reveal">
+        <div class="info-card">
+          <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+          <div>
+            <h4> To visit ANF</h4>
+            <p>
+              AnF tanning company<br />
+              kothwal complex,539,Cutchy Road, Vaniyambadi<br />
+              Tamil Nadu – 635751, India
+            </p>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+          <h4>Call Us</h4>
+          <p><a href="tel:+919962078640">+91 9962078640</a></p>
+        </div>
+        <div class="info-card">
+          <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+          <h4>Email</h4>
+          <p><a href="mailto:anfchennai@gmail.com">anfchennai@gmail.com</a></p>
+        </div>
+        <div class="info-card">
+          <span class="info-icon"><i class="fa-solid fa-clock"></i></span>
+          <h4>Working Hours</h4>
+          <p>
+            Monday – Saturday : 6:30am – 9:00pm<br />
+            Sunday : holiday
+          </p>
+        </div>
+
+        <!-- Social Media Bar -->
+        <div id="contact-social" class="contact-social">
+          <h5>Our social media profile </h5>
+          <ul class="social-list" aria-label="Social media">
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://facebook.com/yourhandle" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://wa.me/919962078640" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>    
+
+    <!-- Google Map -->
+    <div id="map" class="map-wrap reveal">
+      <div id="map-offline" class="map-offline" hidden>
+        <span class="eyebrow">Map Preview</span>
+        <h3>Location Available When Online</h3>
+        <p>
+          The live map only loads when a connection is available. You can still open
+          the address directly in Google Maps any time.
+        </p>
+        <a
+          class="btn btn-primary btn-map"
+          href="https://maps.google.com/?q=Rodeo+Drive+Beverly+Hills+CA+90210"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Open in Google Maps</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <!-- Replace the data-map-src below with your own Google Maps embed code -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d318.65468597805784!2d78.62035180533236!3d12.687975177637243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bada901cdc2421d%3A0x9bb2cb073124b551!2sAnF%20Tanning%20Company!5e0!3m2!1sen!2sin!4v1785831869629!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- 11. FOOTER                                                    -->
+<!-- ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo logo-light">
+        <span class="logo-mark">ANF</span>
+        <span class="logo-tagline">Leather Co.</span>
+      </a>
+      <p class="footer-about">
+        Premium leather goods crafted in small batches — for a refined, timeless finish. Designed and assembled with care 
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <ul class="social-list footer-social" aria-label="Social media">
+        <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://facebook.com/yourhandle" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://pinterest.com/yourhandle" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+        <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      </ul>
+      <h5 style="margin-top:2.5rem;">New visitor?</h5>
+      <form class="footer-newsletter" onsubmit="event.preventDefault(); this.querySelector('.newsletter-thanks').hidden=false;">
+        <input type="email" placeholder="Your email" required aria-label="Email for newsletter" />
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+        <small class="newsletter-thanks" hidden><i class="fa-solid fa-check"></i> Thanks — you're in.</small>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="year"></span> ANF Leather Company.site designed by ANF technical team (Dev.rihaan )</p>
+      <p class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <span class="sep">·</span>
+        <a href="#">Terms of Service</a>
+        <span class="sep">·</span>
+        <a href="#">Shipping &amp; Returns</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- 10. FLOATING BUTTONS (WhatsApp + Call)                        -->
+<!-- ============================================================ -->
+<div class="floating-actions" aria-label="Quick contact">
+  <!-- WhatsApp — swap 15551234567 & pre-filled msg -->
+  <a
+    id="float-whatsapp"
+    class="float-btn float-whatsapp"
+    href="https://wa.me/919962078640?text=Hi%20ANF%21%20I%27d%20love%20to%20learn%20more%20about%20your%20products."
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+    title="WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="float-pulse" aria-hidden="true"></span>
+  </a>
+  <!-- Call Button — swap tel: link -->
+  <a
+    id="float-call"
+    class="float-btn float-call"
+    href="tel:+919962078640"
+    aria-label="Call us"
+    title="Call +91 99620-78640"
+  >
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
+
+<!-- Back to Top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- Scripts (defer = non render-blocking) -->
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/gallery.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+</body>
+</html>
